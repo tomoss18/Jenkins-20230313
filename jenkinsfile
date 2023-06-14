@@ -2,14 +2,10 @@ pipeline {
     agent any
     
     stages {
-        stage('Hello') {
+        stage('Docker Build and Push') {
             steps {
-                echo 'Hello World'
-            }
-        }
-        stage('docker_ps') {
-            steps {
-                sh 'docker ps'
+                sh 'docker build -t tlopez/jenkinspipeline . '
+                sh 'docker push tlopez/jenkinspipeline'
             }
         }
     }
