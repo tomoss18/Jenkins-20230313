@@ -20,5 +20,3 @@ RUN curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/s
 
 # Set Python as the default interpreter
 RUN ln -sf /usr/bin/python3 /usr/bin/python
-
-USER jenkins
